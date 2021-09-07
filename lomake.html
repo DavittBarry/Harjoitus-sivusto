@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="utf-8" />
+    <title>Lomake - Harjoitussaitti</title>
+    <link rel="stylesheet" href="css/styles.css" media="screen" />
+</head>
+<body>
+<div class="container">
+    <header>
+        <a href="index.html" id="logo">Docendo Discimus</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="kuvat.html">Kuvat</a></li>
+                <li><a href="taulukot.html">Taulukot</a></li>
+                <li><a href="lomake.html">Lomake</a></li>
+                <li><a href="videot.html">Video</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Lomake</h1>
+        <p>Tässä vähän kokeillaan lomakkeen tekemistä!</p>
+        <form action="post-script.php" method="post">
+            <fieldset>
+                <legend>Yhteystiedot</legend>
+                <p>
+                <label for="firstName">Etunimi</label> <br/>
+                <input type="text" id="firstName" name="Etunimi" required> 
+                </p>
+                <p>
+                <label for="lastName">Sukunimi</label> <br/>
+                <input type="text" id="lastName" name="Sukunimi" required> 
+                </p>
+                <p>
+                <label for="email">Sähköposti</label> <br/>
+                <input type="email" id="email" name="Sähköposti" required> 
+                </p>
+                <p>
+                <label for="telephone">Puhelin</label> <br/>
+                <input type="tel" id="telephone" name="Puhelin"> 
+                </p>
+                <p>
+                <label for="address">Lähiosoite</label> <br/>
+                <input type="text" id="address" name="Lähiosoite"> 
+                </p>
+                <p>
+                <label for="postalCode">Postinumero</label> <br/>
+                <input type="text" id="postalCode" name="Postinumero" minlength="5" maxlength="5"> 
+                </p>
+                <p>
+                <label for="postOffice">Postitoimipaikka</label> <br/>
+                <input type="text" id="postOffice" name="Postitoimipaikka"> 
+                    </p>
+            </fieldset>
+            <p>
+                <label for="message">Viesti:</label><br />
+                <textarea id="message" name="Viesti" rows="5" cols="50" required></textarea>
+            </p>
+            <p>
+                <input type="radio" id="male" name="Sukupuoli" value="Mies" checked/> <label for="male">Mies</label><br />
+                <input type="radio" id="female" name="Sukupuoli" value="Nainen" /> <label for="female">Nainen</label><br />
+                <input type="radio" id="other" name="Sukupuoli" value="Muu" /> <label for="other">Mies</label><br />
+            </p>
+            <p>
+                <label for="contact">Yhteydenottotapa</label><br />
+                <select id="contact" name="Yhteydenottotapa" required> 
+                    <option value="">Valitse</option>
+                    <option value="Puhelin">Puhelin</option>
+                    <option value="Sähköposti">Sähköposti</option>
+                    <option value="Fax">Fax</option>
+                    <option value="Savumerkit">Savumerkit</option>
+                </select>
+            </p>
+            <p>
+                <input type="checkbox" id="terms" name="Ehdot" value="Hyväksyn" required /> <label for="terms">Olen lukenut ja hyväksyn.</label>
+            </p>
+            <p>
+                <button type="submit">Lähetä</button>
+            </p>
+        </form>
+    </main>
+    <footer>&copy; Davitt Barry </footer>
+</div>
+</body>
+</html>
